@@ -33,7 +33,7 @@ print()
 
 print(infoMsg + "Aktualizowanie bibliotek używając polecenia " + Fore.YELLOW + "pip install -U")
 print(startscriptMsg)
-os.system("pip install -r requirements.txt -U")
+os.system(F"pip install -r {script_dir}/requirements.txt -U")
 print(endScriptMsg)
 print()
 
@@ -44,7 +44,7 @@ if quiet:
     else: os.system(F'setsid python {script_dir}/app/main.py >/dev/null 2>&1 < /dev/null &')
  
 else: 
-    print(infoMsg + "Uruchamianie programu - " + Fore.YELLOW + "main.py" + Style.RESET_ALL + " - użyj " + Fore.RED + "Ctrl + C" + Style.RESET_ALL + ", aby zakończyć.") 
+    print(infoMsg + "Uruchamianie programu - " + Fore.YELLOW + "main.py" + Style.RESET_ALL + " - użyj " + Fore.RED + "Ctrl + C" + Style.RESET_ALL + ", aby zakończyć (może to chwilę potrwać)") 
     print(startscriptMsg)
 
     if platform.system() == 'Windows': os.system(F'python {script_dir}/app/main.py 2> nul')

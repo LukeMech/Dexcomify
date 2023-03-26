@@ -31,7 +31,7 @@ class App(tk.Tk):
         # Funkcja odświeżania co minutę
         try: self.label.configure(text=F'{sugar.level()} {sugar.trendArrow()}')
         except: self.label.configure(text=F'')
-        self.after(30000, self.refresh)
+        self.after(15000, self.refresh)
 
     def show_context_menu(self, event):
         # Wyświetlenie menu kontekstowego po kliknięciu prawym przyciskiem myszy
