@@ -13,12 +13,11 @@ class App(tk.Tk):
         self.overrideredirect(True)
 
         # Dodanie widgetu Label z tekstem
-        self.label = tk.Label(self, text="Przykładowy tekst")
+        self.label = tk.Label(self, text="Loading...")
         self.label.config(font=("Arial", 15))
         self.label.pack()
 
         # Uruchomienie funkcji odświeżania co minutę
-        self.label.configure(text='Loading...')
         self.refresh()
 
         # Dodanie menu kontekstowego
